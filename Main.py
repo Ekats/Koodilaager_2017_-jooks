@@ -11,7 +11,7 @@ gameExit = False
 pygame.display.set_caption("Ööjooksu simulaator")
 gameDisplay = pygame.display.set_mode((windowX,windowY))
 jooksja = player.Jooksja(100,100)
-akva = enemy.Akva(100,200)
+akva = enemy.Akva(285,250)
 kaart = Map(map,gameDisplay)
 if __name__ == '__main__':
 
