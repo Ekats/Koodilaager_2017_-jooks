@@ -17,8 +17,12 @@ class Akva():
         gameDisplay.blit(self.blit_Akva, self.rect)
 
     def jahib(self, player, map_data):
+        tile_x = (self.x // TILESIZE) + 1
+        tile_y = (self.y // TILESIZE) + 1
+
+
         possible_dirs = []
-        if not 
+
         try:
             if map_data[tile_y][tile_x - 1] == 0:
                 possible_dirs.append(1)
@@ -56,7 +60,7 @@ class Akva():
             self.y -= self.y_speed
 
 
-        self.rect = pygame.Rect([self.x, self.y, 8, 16])
+        self.rect = pygame.Rect([self.x, self.y, TILESIZE, TILESIZE])
 
 
     """# find normalized direction vector (dx, dy) between enemy and player
