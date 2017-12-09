@@ -3,10 +3,6 @@ from map import *
 import player
 import audio
 
-
-
-windowX = 800
-windowY = 600
 gameDisplay = pygame.display.set_mode((windowX,windowY))
 
 gameExit = False
