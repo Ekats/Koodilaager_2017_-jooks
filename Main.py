@@ -21,13 +21,16 @@ if __name__ == '__main__':
 	while not gameExit:
 		kaart.draw_map()
 		jooksja.draw_player(gameDisplay)
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				gameExit = True
-		if event.type == pygame.KEYDOWN:
-			if event.key == pygame.K_ESCAPE:
-				gameExit = True
-		pygame.display.update()
+		try:
+			for event in pygame.event.get():
+				if event.type == pygame.QUIT:
+					gameExit = True
+			if event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_ESCAPE:
+					gameExit = True
+			pygame.display.update()
+		except:
+			pass
 
 
 
