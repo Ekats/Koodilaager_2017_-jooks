@@ -1,5 +1,6 @@
 import pygame
 
+<<<<<<< HEAD
 
 pygame.init()
 
@@ -13,3 +14,7 @@ class Jooksja():
 
     def draw_player(self, gameDisplay):
         gameDisplay.blit(self.blit_Jooksja, self.rectangle)
+=======
+#class Player:
+#    def __init__(self):
+>>>>>>> 86b14bc08b21fb1a993db6a0416f8b9b4b9d26d9

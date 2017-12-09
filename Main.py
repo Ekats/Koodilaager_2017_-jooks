@@ -16,7 +16,7 @@ if __name__ == '__main__':
 	pygame.init()
 	clock = pygame.time.Clock()
 	audio_manager = audio.Audio()
-	#audio_manager.play_background()
+	audio_manager.play_background()
 
 	while not gameExit:
 		kaart.draw_map()
@@ -28,7 +28,10 @@ if __name__ == '__main__':
 			if event.key == pygame.K_ESCAPE:
 				gameExit = True
 		pygame.display.update()
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 86b14bc08b21fb1a993db6a0416f8b9b4b9d26d9
 pygame.quit()
 quit()
