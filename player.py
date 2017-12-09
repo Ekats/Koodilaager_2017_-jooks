@@ -28,5 +28,5 @@ class Jooksja():
         elif direction == 'right':
             self.x += 1
 #class Player:
-#    def __init__(self):
+#    def __init__(playerself):
 

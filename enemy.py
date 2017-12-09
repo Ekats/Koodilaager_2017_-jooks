@@ -2,27 +2,34 @@ import pygame
 
 
 class Akva():
-    def __init__(self, x, y, akva_pilt):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
         self.x_spd = 0
         self.y_vel = 0
-        self.icon = akva_pilt
-        self.dead = false
-        self.rect = pygame.Rect([self.x, self.y, (cellx - 3), (celly - 4)])
-        self.dead = false
+        self.blit_Akva = pygame.image.load("art_assets/Akva.png")
+        self.rect = pygame.Rect([self.x, self.y, 8, 16])
 
-    def draw(self):
-        pass
+    def draw_akva(self, gameDisplay):
+        self.rect = pygame.Rect([self.x, self.y, 8, 16])
+
+        self.blit_Akva = pygame.image.load("art_assets/Akva.png")
+        gameDisplay.blit(self.blit_Akva, self.rect)
+
+        #pass
 
 # tilesize=11;20
 # akvasize=8;16
 
-
-
 ##movement
 
 
+"""def akva_move():
+    if (playerself.x - self.x) < 0:
+        self.x -= 1
+        print("cyka")
+    elif (playerself.x - self.x) > 0:
+        self.x += 1"""
 
 
 """xya

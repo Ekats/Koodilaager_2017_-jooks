@@ -1,6 +1,7 @@
 import pygame
 from map import *
 import player
+import enemy
 import audio
 from constants import *
 
@@ -10,6 +11,7 @@ gameExit = False
 pygame.display.set_caption("Ööjooksu simulaator")
 gameDisplay = pygame.display.set_mode((windowX,windowY))
 jooksja = player.Jooksja(100,100)
+akva = enemy.Akva(100,200)
 kaart = Map(map,gameDisplay)
 if __name__ == '__main__':
 
@@ -21,6 +23,7 @@ if __name__ == '__main__':
 	while not gameExit:
 		kaart.draw_map()
 		jooksja.draw_player(gameDisplay)
+		akva.draw_akva(gameDisplay)
 		try:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
