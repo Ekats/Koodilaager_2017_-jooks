@@ -1,12 +1,11 @@
 import pygame
 from constants import *
-gameDisplay = pygame.display.set_mode((windowX, windowY))
 class Map():
     def __init__(self,map,gameDisplay):
         self.map = map
+        self.gameDisplay = gameDisplay
 
-
-    def draw_map(self):
+    def draw_map(self,map,gameDisplay):
         self.thing = map.split('\n')
         if self.thing[0] == '':
             del self.thing[0]
@@ -32,3 +31,4 @@ class Map():
                     pygame.draw.rect(gameDisplay, (0, 255, 0), (j * cellx, i * celly, cellx, celly))
                 elif self.thing[i][j] == 'R':
                     pygame.draw.rect(gameDisplay, (128, 128, 128), (j * cellx, i * celly, cellx, celly))
+        pygame.display.update()

@@ -37,10 +37,3 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXDDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
 windowX = 781
 windowY = 700
-thing = map.split('\n')
-if thing[0] == '':
-    del thing[0]
-if thing[-1] == '':
-    del thing[-1]
-celly = int(windowY / len(thing))
-cellx = int(windowX / len(thing[0]))
