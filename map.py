@@ -2,11 +2,16 @@ import pygame
 from constants import *
 pygame.init()
 gameDisplay = pygame.display.set_mode([windowX, windowY])
+bad = []
 def draw_map():
     for i in range(len(thing)):
         for j in range(len(thing[0])):
             if thing[i][j] == 'X':
                 pygame.draw.rect(gameDisplay, (255, 255, 255), (j*cellx, i*celly, cellx, celly))
+                bad.append(j*cellx)
+                bad.append(i*celly)
+                bad.append(j*cellx + cellx)
+                bad.append(i*celly + celly)
             elif thing[i][j] == 'O':
                 pygame.draw.rect(gameDisplay, (218,165,32), (j * cellx, i * celly, cellx, celly))
             elif thing[i][j] == 'D':
