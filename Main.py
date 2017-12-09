@@ -1,5 +1,5 @@
 import pygame
-import map
+from map import *
 import player
 import audio
 
@@ -20,13 +20,13 @@ if __name__ == '__main__':
 	#audio_manager.play_background()
 
 	while not gameExit:
+		draw_map()
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				gameExit = True
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_ESCAPE:
 				gameExit = True
-		gameDisplay.fill((0, 0, 0))
 		pygame.display.update()
 
 pygame.quit()
