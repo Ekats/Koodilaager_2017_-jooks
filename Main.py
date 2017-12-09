@@ -28,9 +28,17 @@ if __name__ == '__main__':
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_ESCAPE:
 					gameExit = True
+				elif event.key == pygame.K_w:
+					jooksja.move('up')
+				elif event.key == pygame.K_s:
+					jooksja.move('down')
+				elif event.key == pygame.K_a:
+					jooksja.move('left')
+				elif event.key == pygame.K_d:
+					jooksja.move('right')
 			pygame.display.update()
 		except:
-			pass
+			import pygame
 
 
 
